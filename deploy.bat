@@ -1,0 +1,16 @@
+@echo off
+
+ECHO Running git init...
+git init
+
+ECHO Running git add...
+git add .
+
+ECHO Running git commit...
+git commit -m "heroku release"
+
+ECHO Running git remote add...
+git remote add heroku git@heroku.com:covertest.git
+
+ECHO Running git push...
+git push -f heroku master
